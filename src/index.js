@@ -7,6 +7,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
+const hostname = process.env.HOSTNAME;
 
 app.use(cors());
 
@@ -42,6 +43,6 @@ app.get('/services', (req, res) => {
     res.send('Hello from services page');
 });
 
-app.listen(port,  () => {
-    console.log(`Server is running on http://localhost:${port}`);
+app.listen(port, hostname  () => {
+    console.log(`Server is running on http://${hostname}:${port}`);
 });
