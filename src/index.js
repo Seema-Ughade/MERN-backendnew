@@ -43,6 +43,6 @@ app.get('/services', (req, res) => {
     res.send('Hello from services page');
 });
 
-app.listen(port, hostname  () => {
+app.listen(port, hostname,  () => {
     console.log(`Server is running on http://${hostname}:${port}`);
 });
